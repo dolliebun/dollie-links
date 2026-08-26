@@ -5,3 +5,36 @@
 .music-player{position:fixed;left:20px;bottom:20px;z-index:10;display:flex;align-items:center;gap:10px;min-width:210px;padding:9px 10px;border:1px solid #ffc0dc38;border-radius:18px;background:#270b18e8;backdrop-filter:blur(16px);box-shadow:0 15px 45px #0008;transition:.3s}.music-player.hidden{opacity:0;transform:translateY(20px) scale(.9);pointer-events:none}.disc{width:42px;height:42px;flex:none;border:1px solid #ffc7df4f;border-radius:50%;color:#4b1029;background:linear-gradient(145deg,#ffc5df,#e77ead);cursor:pointer;box-shadow:0 0 20px #e4659e2e}.track{display:grid;gap:2px;min-width:100px}.track span{color:#9e687e;font-size:8px;letter-spacing:.16em;text-transform:uppercase}.track b{font:400 14px Georgia,serif}.hide-player{margin-left:auto;border:0;color:#9b667b;background:transparent;font-size:20px;cursor:pointer}.show-player{position:fixed;left:20px;bottom:20px;z-index:9;width:45px;height:45px;border:1px solid #ffc0dc38;border-radius:50%;color:#ffd1e5;background:#270b18e8;box-shadow:0 12px 35px #0008;opacity:0;transform:scale(.8);pointer-events:none;cursor:pointer;transition:.3s}.show-player.visible{opacity:1;transform:none;pointer-events:auto}.notes{position:absolute;left:20px;top:0;pointer-events:none}.notes span{position:absolute;color:#ff9fc8;opacity:0;font-family:Georgia,serif}.playing .notes span{animation:float-note 2.4s infinite ease-out}.playing .notes span:nth-child(2){animation-delay:.6s;left:20px}.playing .notes span:nth-child(3){animation-delay:1.2s;left:8px}.playing .notes span:nth-child(4){animation-delay:1.8s;left:26px}@keyframes float-note{0%{opacity:0;transform:translateY(0) rotate(-8deg) scale(.7)}20%{opacity:1}100%{opacity:0;transform:translateY(-62px) rotate(13deg) scale(1.15)}}
 @media(max-width:540px){.page-wrap{width:min(calc(100% - 20px),680px);padding-top:10px}.hero{height:190px;border-radius:22px}.profile-card{margin:-27px 11px 18px;gap:12px;align-items:center}.avatar-wrap{width:86px;height:86px}.eyebrow{font-size:8px}h1{font-size:28px}.bio{font-size:12px}.link-card{min-height:72px}.coming-soon div{grid-template-columns:1fr}.gate-card{padding:34px 23px 26px}.music-player{left:10px;bottom:10px}.show-player{left:10px;bottom:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Dollie pixel UI */
+body{cursor:url("assets/cursor-arrow.svg") 2 2,auto}
+a,button,[role=button]{cursor:url("assets/cursor-heart.svg") 16 12,pointer}
+.icon{font-size:0}
+.icon svg{width:30px;height:30px;shape-rendering:crispEdges}
+.link-card i{width:23px;height:23px;font-size:0}
+.link-card i svg{width:100%;height:100%;shape-rendering:crispEdges}
+.disc{display:grid;place-items:center}
+.disc svg{width:23px;height:23px;shape-rendering:crispEdges}
+.hide-player{width:28px;height:28px;padding:4px;font-size:0}
+.hide-player svg{width:100%;height:100%;shape-rendering:crispEdges}
+.show-player{padding:9px;font-size:0}
+.show-player svg{width:100%;height:100%;shape-rendering:crispEdges}
+@media(pointer:coarse){body,a,button,[role=button]{cursor:auto}}
+
+/* Final soft pixel styling */
+@font-face{font-family:Minecraft;src:url("assets/Minecraft.ttf") format("truetype");font-display:swap}
+body,button,a{font-family:Minecraft,Arial,sans-serif}
+h1{font-family:Minecraft,Arial,sans-serif;font-size:clamp(28px,6vw,40px);line-height:1.1;letter-spacing:0}
+.bio,.link-copy b,.coming-soon p,.gate h2,.track b{font-family:Minecraft,Arial,sans-serif;font-style:normal}
+.bio{font-size:12px;line-height:1.6}.link-copy b{font-size:15px}.coming-soon p{font-size:11px}.gate h2{font-size:clamp(25px,7vw,34px);line-height:1.18}.track b{font-size:12px}
+footer{display:grid;justify-items:center;gap:8px;font-size:9px;letter-spacing:.06em}
+footer a{color:#9b6c82;text-decoration:underline;text-decoration-color:#9b6c8260;text-underline-offset:3px}
+footer a:hover,footer a:focus-visible{color:#ffc2dc}
+body{cursor:url("assets/cursor-paw.png") 2 2,auto}
+a,button,[role=button]{cursor:url("assets/cursor-link.png") 10 2,pointer}
+.icon img{width:35px;height:35px;object-fit:contain}
+.link-card i img{width:100%;height:100%;object-fit:contain}
+.disc img{width:22px;height:22px;object-fit:contain}
+.hide-player{font-size:20px;line-height:1}
+.show-player{padding:9px;font-size:18px}
+@media(pointer:coarse){body,a,button,[role=button]{cursor:auto}}

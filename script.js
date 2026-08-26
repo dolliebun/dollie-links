@@ -7,7 +7,7 @@ song.volume = 0.32;
 
 function syncPlayer() {
   const playing = !song.paused;
-  play.textContent = playing ? 'Ⅱ' : '▶';
+  play.innerHTML = `<img src="assets/icon-${playing ? 'pause' : 'play'}.png" alt="">`;
   play.setAttribute('aria-label', playing ? 'Pause music' : 'Play music');
   player.classList.toggle('playing', playing);
 }
